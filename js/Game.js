@@ -14,8 +14,8 @@
       */
 
      createPhrases() {
-        const phrases = [new Phrase('We can do it'), new Phrase('I love JavaScript'), new Phrase('I can show you the world'), new Phrase('We know'), 
-                           new Phrase('I can do all things')];
+        const phrases = [new Phrase('Linger Ann Aragon', 'Your name'), new Phrase('Cheesecake', 'You ended up buying this today with the coffee'), new Phrase('Starbucks', 'Your favorite coffee shop'), new Phrase('Wedding Planning', 'Your business and something you love to do'), 
+                           new Phrase("Saint Augustine", "Your favorite saint")];
     
         return phrases;
      }
@@ -27,6 +27,7 @@
       */
 
      getRandomPhrase() {
+         
         return this.phrases[Math.floor(Math.random()*this.phrases.length)]
      }
 
@@ -35,7 +36,10 @@
       */
     startGame(){
         document.getElementById('overlay').style.display = 'none';
+       
         this.activePhrase = this.getRandomPhrase();
+        document.getElementById("hint").textContent = "Hint: " + this.activePhrase.hint;
+       
         console.log(this.activePhrase);
         this.activePhrase.addPhraseToDisplay();
 

@@ -3,8 +3,9 @@
  * Phrase.js */
 
  class Phrase {
-     constructor(phrase){
-         this.phrase = phrase.toLowerCase();
+     constructor(phrase, hint){
+         this.phrase = phrase.toUpperCase();
+         this.hint = hint;
      }
      
      /**

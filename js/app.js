@@ -22,7 +22,19 @@ resetButton.addEventListener('click', () =>{
     game.startGame();
     keypress = [];
     
-})
+});
+
+
+document.addEventListener('keydown', function (e) {
+    var key = e.which || e.keyCode;
+    if (key === 13) { // 13 is enter
+        console.log(key);
+        game = new Game();
+    game.startGame();
+    keypress = [];
+      
+    }
+});
 
 const keyboard = document.getElementById('qwerty');
 keyboard.addEventListener('click', function(e){
@@ -37,7 +49,7 @@ document.addEventListener('keydown', function (evt){
     //const keys = document.querySelector('.key');
     if(document.getElementById('overlay').style.display === 'none'){
     if(evt.keyCode >= 65 && evt.keyCode <=90){  
-   const char =  String.fromCharCode(evt.keyCode || evt.key).toLowerCase();
+   const char =  String.fromCharCode(evt.keyCode || evt.key).toUpperCase();
    const keys = evt.target.getElementsByClassName('key');
 
 
