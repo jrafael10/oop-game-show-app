@@ -14,8 +14,8 @@
       */
 
      createPhrases() {
-        const phrases = [new Phrase('Linger Ann Aragon', 'Your name'), new Phrase('Cheesecake', 'You ended up buying this today with the coffee'), new Phrase('Starbucks', 'Your favorite coffee shop'), new Phrase('Wedding Planning', 'Your business and something you love to do'), 
-                           new Phrase("Saint Augustine", "Your favorite saint")];
+        const phrases = [new Phrase('Winnipeg', 'Capital city of Manitoba'), new Phrase('Jesse Rafael', 'My name'), new Phrase('Starbucks', 'My favorite coffee shop'), new Phrase('Wedding Planning', 'Your business and something you love to do'), 
+                           new Phrase("Dizon", "My last name")];
     
         return phrases;
      }
