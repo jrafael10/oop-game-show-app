@@ -14,7 +14,7 @@
       */
 
      createPhrases() {
-        const phrases = [new Phrase('February 20, 1992', 'My Birthday: Please answer in this format: (Month day, year)'), new Phrase('Mona Trexy', 'My name'), new Phrase('Vancouver', 'My favorite Canadian city. It starts with "V"'), new Phrase('Milk tea', 'My comfort food'), 
+        const phrases = [new Phrase('Cooking and Hiking', 'My Interests'), new Phrase('Mona Trexy', 'My name'), new Phrase('Vancouver', 'My favorite Canadian city. It starts with "V"'), new Phrase('Milk tea', 'My comfort food'), 
                            new Phrase("Layam", "My last name"), new Phrase("Nurse Anesthetist", "My Day job")];
     
         return phrases;
