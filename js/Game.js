@@ -14,8 +14,8 @@
       */
 
      createPhrases() {
-        const phrases = [new Phrase('Cooking and Hiking', 'My Interests'), new Phrase('Mona Trexy', 'My name'), new Phrase('Vancouver', 'My favorite Canadian city. It starts with "V"'), new Phrase('Milk tea', 'My comfort food'), 
-                           new Phrase("Layam", "My last name"), new Phrase("Nurse Anesthetist", "My Day job")];
+        const phrases = [new Phrase('David Archuleta', 'My singer idol'), new Phrase('Dagat', 'Ganahan ko maligo sa ___'), new Phrase('Badminton', 'My Sports'), new Phrase('Maasin', 'My Hometown'), 
+                           new Phrase("Cadya", "My girl friends used to call me C____"), new Phrase("Skate", "I just learned how to S____ in Canada")];
     
         return phrases;
      }
