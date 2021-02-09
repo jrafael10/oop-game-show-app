@@ -3,10 +3,13 @@
  * Game.js */
 
  class Game{
-     constructor() {
+    
+     constructor(phrase_num) {
          this.missed = 0;
          this.phrases = this.createPhrases();
          this.activePhrase = null;
+         this.phrase_num = phrase_num;
+        
      }
      /**
       * Creates phrases for use in game 
@@ -27,14 +30,30 @@
       */
 
      getRandomPhrase() {
-         
-        return this.phrases[Math.floor(Math.random()*this.phrases.length)]
+        
+        let lastNumber  = 0;
+
+        /*var randomNumber = function(){
+            var getRandomNumber = Math.random()*this.phrases.length;
+            if(getRandomNumber != lastNumber){
+                var randomPhrase = this.phrases[getRandomNumber];
+                lastNumber = getRandomNumber;
+                return randomPhrase;
+
+            } else {
+                //randomNumber();    
+                return this.phrases[Math.floor(Math.random()*this.phrases.length)]
+            }
+        }*/
+        return this.phrases[this.phrase_num];
+       // return this.phrases[Math.floor(Math.random()*this.phrases.length)]
      }
 
      /**
       * Begins by selecting a random phrase and displaying it to user
       */
     startGame(){
+        console.log(this.phrase_num);
         document.getElementById('overlay').style.display = 'none';
        
         this.activePhrase = this.getRandomPhrase();
@@ -111,6 +130,7 @@
             document.querySelector('.start').classList.add('lose');
             document.querySelector('.start').classList.remove('win');
         document.getElementById('game-over-message').textContent = "Sorry, better luck next time.";
+          
         
         
         
@@ -121,9 +141,11 @@
             document.querySelector('.start').classList.add('win');
             document.querySelector('.start').classList.remove('lose');
         document.getElementById('game-over-message').textContent = "Great job!";
+          
              }
            }, 500)
         
+           
     }
 
     /**

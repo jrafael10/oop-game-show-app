@@ -13,14 +13,22 @@
  let game; 
  let keypress =[];
 let disable = false;
+let phrase = 0;
 
 let resetButton = document.getElementById('btn__reset');
 
 
 resetButton.addEventListener('click', () =>{
-    game = new Game();
+    game = new Game(phrase);
     game.startGame();
     keypress = [];
+    if(phrase == game.createPhrases().length-1){
+        phrase = 0;
+    }else {
+        phrase++;
+
+    }
+    
     
 });
 
@@ -29,8 +37,15 @@ document.addEventListener('keydown', function (e) {
     var key = e.which || e.keyCode;
     if (key === 13) { // 13 is enter
         console.log(key);
-        game = new Game();
+        game = new Game(phrase);
     game.startGame();
+    
+    if(phrase == game.createPhrases().length-1){
+        phrase = 0;
+    }else {
+        phrase++;
+
+    }
     keypress = [];
       
     }
