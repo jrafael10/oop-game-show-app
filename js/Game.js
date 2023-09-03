@@ -17,8 +17,8 @@
       */
 
      createPhrases() {
-        const phrases = [new Phrase('David Archuleta', 'My singer idol'), new Phrase('Dagat', 'Ganahan ko maligo sa ___'), new Phrase('Badminton', 'My Sports'), new Phrase('Maasin', 'My Hometown'), 
-                           new Phrase("Cadya", "My girl friends used to call me C____"), new Phrase("Skate", "I just learned how to S____ in Canada")];
+        const phrases = [new Phrase('Winnipeg', 'Answer is Winnipeg'), new Phrase('Jesse', 'Answer is Jesse'), new Phrase('Badminton', 'Answer is Badminton'), new Phrase('web development', 'Answer is web development'), 
+                           new Phrase("summer", "Answer is summer"), new Phrase("Skiing", "Answer is skiing")];
     
         return phrases;
      }
